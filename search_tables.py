@@ -19,49 +19,39 @@ driver.find_element(By.XPATH, Locators.akceptuje).click()
 time.sleep(2)
 
 table = []
+table2 = []
 
 for elem in driver.find_elements_by_xpath('//a[@class="js_clickHash go-to-product"]'):
     p = elem.get_attribute('title')
     table.append(p)
 
-# r = len(table)
+r = len(table)
 
-a = str(table[0])
-b = str(table[1])
-c = str(table[2])
-d = str(table[3])
-e = str(table[4])
-f = str(table[5])
+for x in range(0, r):
+    if search.casefold() in str(table[x]).casefold():
+        a = str(table[x])
+        table2.append(a)
 
-if search.casefold() in a.casefold():
-    driver.find_element_by_css_selector("[title^='" + a + "']").click()
-elif search.casefold() in b.casefold():
-    driver.find_element_by_css_selector("[title^='" + b + "']").click()
-elif search.casefold() in c.casefold():
-    driver.find_element_by_css_selector("[title^='" + c + "']").click()
-elif search.casefold() in d.casefold():
-    driver.find_element_by_css_selector("[title^='" + d + "']").click()
-elif search.casefold() in e.casefold():
-    driver.find_element_by_css_selector("[title^='" + e + "']").click()
-elif search.casefold() in f.casefold():
-    driver.find_element_by_css_selector("[title^='" + f + "']").click()
+if len(table2) == 0:
+    print("Nie znaleziono wyszukiwanego sprzętu")
+    log.write("Wpisano do wyszukania sprzęt [" + search + "]. Ceneo nie znalazło poprawnego rezultatu. Data wyszukania: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
+else:
+    driver.find_element_by_css_selector("[title^='" + str(table2[0]) + "']").click()
+    time.sleep(2)
+    print("\nOferty niepromowane:\n")
+    log.write("Oferty niepromowane:\n")
 
-time.sleep(2)
+    for element in driver.find_elements_by_xpath('//tr[@class="product-offer js_product-offer"]'):
+        k = element.get_attribute('data-shopurl')
+        t = element.get_attribute('data-price')
+        log.write("Cena sprzętu [" + str(table2[0]) + "] w dniu " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " w sklepie " + str(k) + " wynosi " + str(t) + " zł" + "\n")
+        print(k, t)
 
-print("Oferty niepromowane:\n")
-log.write("Oferty niepromowane:\n")
+    print("\nOferty promowane:\n")
+    log.write("\nOferty promowane:\n")
 
-for element in driver.find_elements_by_xpath('//tr[@class="product-offer js_product-offer"]'):
-    k = element.get_attribute('data-shopurl')
-    t = element.get_attribute('data-price')
-    log.write("Cena sprzętu [" + str(table[1]) + "] w dniu " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " w sklepie " + str(k) + " wynosi " + str(t) + " zł" + "\n")
-    print(k, t)
-
-print("Oferty promowane:\n")
-log.write("Oferty promowane:\n")
-
-for ele in driver.find_elements_by_xpath('//tr[@class="product-offer js_product-offer promoted"]'):
-    q = ele.get_attribute('data-shopurl')
-    z = ele.get_attribute('data-price')
-    log.write("Cena sprzętu [" + str(table[1]) + "] w dniu " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " w sklepie " + str(q) + " wynosi " + str(z) + " zł" + "\n")
-    print(q, z)
+    for ele in driver.find_elements_by_xpath('//tr[@class="product-offer js_product-offer promoted"]'):
+        q = ele.get_attribute('data-shopurl')
+        z = ele.get_attribute('data-price')
+        log.write("Cena sprzętu [" + str(table2[0]) + "] w dniu " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " w sklepie " + str(q) + " wynosi " + str(z) + " zł" + "\n")
+        print(q, z)
