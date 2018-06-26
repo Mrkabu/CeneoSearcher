@@ -11,36 +11,71 @@ num = input('Podaj liczbę sklepów (od 1 do 10, 0 dla wyszukania we wszystkich 
 
 if num == '0':
     print('Wyszukiwanie we wszystkich sklepach')
-    shop1 = 0
-    shop2 = 0
-    shop3 = 0
-    shop4 = 0
-    shop5 = 0
-    shop6 = 0
-    shop7 = 0
-    shop8 = 0
-    shop9 = 0
-    shop10 = 0
+    shop1 = '0'
+    shop2 = '0'
+    shop3 = '0'
+    shop4 = '0'
+    shop5 = '0'
+    shop6 = '0'
+    shop7 = '0'
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '1':
     shop1 = input('Nazwa 1 sklepu: ')
+    shop2 = '0'
+    shop3 = '0'
+    shop4 = '0'
+    shop5 = '0'
+    shop6 = '0'
+    shop7 = '0'
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '2':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
+    shop3 = '0'
+    shop4 = '0'
+    shop5 = '0'
+    shop6 = '0'
+    shop7 = '0'
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '3':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
     shop3 = input('Nazwa 3 sklepu: ')
+    shop4 = '0'
+    shop5 = '0'
+    shop6 = '0'
+    shop7 = '0'
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '4':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
     shop3 = input('Nazwa 3 sklepu: ')
     shop4 = input('Nazwa 4 sklepu: ')
+    shop5 = '0'
+    shop6 = '0'
+    shop7 = '0'
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '5':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
     shop3 = input('Nazwa 3 sklepu: ')
     shop4 = input('Nazwa 4 sklepu: ')
     shop5 = input('Nazwa 5 sklepu: ')
+    shop6 = '0'
+    shop7 = '0'
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '6':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
@@ -48,6 +83,10 @@ elif num == '6':
     shop4 = input('Nazwa 4 sklepu: ')
     shop5 = input('Nazwa 5 sklepu: ')
     shop6 = input('Nazwa 6 sklepu: ')
+    shop7 = '0'
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '7':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
@@ -56,6 +95,9 @@ elif num == '7':
     shop5 = input('Nazwa 5 sklepu: ')
     shop6 = input('Nazwa 6 sklepu: ')
     shop7 = input('Nazwa 7 sklepu: ')
+    shop8 = '0'
+    shop9 = '0'
+    shop10 = '0'
 elif num == '8':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
@@ -65,6 +107,8 @@ elif num == '8':
     shop6 = input('Nazwa 6 sklepu: ')
     shop7 = input('Nazwa 7 sklepu: ')
     shop8 = input('Nazwa 8 sklepu: ')
+    shop9 = '0'
+    shop10 = '0'
 elif num == '9':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
@@ -75,6 +119,7 @@ elif num == '9':
     shop7 = input('Nazwa 7 sklepu: ')
     shop8 = input('Nazwa 8 sklepu: ')
     shop9 = input('Nazwa 9 sklepu: ')
+    shop10 = '0'
 elif num == '10':
     shop1 = input('Nazwa 1 sklepu: ')
     shop2 = input('Nazwa 2 sklepu: ')
