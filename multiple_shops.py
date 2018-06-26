@@ -8,6 +8,7 @@ import time
 search = input('Podaj produkt do wyszukania: ')
 
 num = input('Podaj liczbę sklepów (od 1 do 10, 0 dla wyszukania we wszystkich sklepach): ')
+opi = 1
 
 if num == '0':
     print('Wyszukiwanie we wszystkich sklepach')
